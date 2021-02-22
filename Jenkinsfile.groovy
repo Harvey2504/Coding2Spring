@@ -50,22 +50,24 @@ pipeline {
             }
         }
 
-        stage('Artifactory-Upload'){
-            steps{
-                rtUpload(
-                    serverId: 'artifactoryserver',
-                    spec : '''{
-                        "files":[
-                            {
-                                     "pattern":"target/*.jar"
-                            "target":"art-doc-dev-local"
-                            }
-                            ]
-                    }''',
-                     buildName: 'holyFrog',
-                    buildNumber: '1'
-                )
+        stage('Deploy to Artifactory')
+     {
+     steps{
+     
+     rtUpload (
+    serverId: 'Jfrog',
+    spec: '''{
+          "files": [
+            {
+              "pattern": "target/*.jar",
+              "target": "art-doc-dev-loc"
             }
-        }
-    }
+         ]
+    }''',
+    buildName: 'holyFrog',
+    buildNumber: '1'
+)
+     }
+  }
+ }
 }
