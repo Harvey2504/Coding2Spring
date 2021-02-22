@@ -67,7 +67,10 @@ pipeline {
     buildName: 'holyFrog',
     buildNumber: '1'
 )
-     }
+         }
+    }
+
   }
- }
+
 }
+//Its Working
