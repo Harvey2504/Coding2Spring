@@ -15,6 +15,9 @@
 	<description>Coding Challenge project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.projectKey>Harvey2504_Coding2Spring</sonar.projectKey>
+  <sonar.organization>myfirstappinqube</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
