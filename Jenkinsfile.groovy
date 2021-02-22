@@ -54,7 +54,7 @@ pipeline {
             steps{
                 rtUpload(
                     serverId: 'artifactoryserver',
-                    spec '''{
+                    spec :'''{
                         "files":[
                             {
                                      "pattern":"target/*.jar"
@@ -63,7 +63,9 @@ pipeline {
                            
                             ]
 
-                    }'''
+                    }''',
+                     buildName: 'holyFrog',
+                    buildNumber: '1'
                 )
             }
         }
