@@ -55,12 +55,12 @@ pipeline {
      steps{
      
      rtUpload (
-    serverId: 'Jfrog',
+    serverId: 'artifactoryserver',
     spec: '''{
           "files": [
             {
               "pattern": "target/*.jar",
-              "target": "art-doc-dev-loc"
+              "target": "art-doc-dev-local"
             }
          ]
     }''',
