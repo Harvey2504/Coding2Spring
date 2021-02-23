@@ -50,6 +50,18 @@ pipeline {
             }
         }
 
+        stage('Collect-Artifacts'){
+            steps{
+                archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
+            }
+        }
+
+        // stage('Quality-Gates'){
+         //   steps{
+          //      waitForQualityGate abortPipeline:true
+          //  }
+       // }
+
         stage('Deploy to Artifactory')
      {
      steps{
