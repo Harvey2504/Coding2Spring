@@ -85,13 +85,4 @@ pipeline {
   }
 
 }
-post{
-    success{
-        mail bcc: '', body: 'Success', cc: '', from: '', replyTo: '', subject: 'Build Status Information', to: 'samalatib96@gmail.com'
-
-    }
-    failure{
-        mail bcc: '', body: 'Failure', cc: '', from: '', replyTo: '', subject: 'Build Status Information', to: 'samalatib96@gmail.com'
-
-    }
-}
+//Its Working
