@@ -84,8 +84,7 @@ pipeline {
 
   }
 
-}
-post{
+  post{
     success{
         mail bcc: '', body: 'Success', cc: '', from: '', replyTo: '', subject: 'Build Status Information', to: 'samalatib96@gmail.com'
 
@@ -94,4 +93,7 @@ post{
         mail bcc: '', body: 'Failure', cc: '', from: '', replyTo: '', subject: 'Build Status Information', to: 'samalatib96@gmail.com'
 
     }
+
+}
+
 }
