@@ -56,12 +56,6 @@ pipeline {
             }
         }
 
-        // stage('Quality-Gates'){
-         //   steps{
-          //      waitForQualityGate abortPipeline:true
-          //  }
-       // }
-
         stage('Deploy to Artifactory')
      {
      steps{
